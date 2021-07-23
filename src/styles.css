@@ -1,0 +1,170 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  margin: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 45px;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Serif", serif;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 25px;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-family: "PT Serif", serif;
+}
+
+.weatherApp {
+  background-image: url("https://images.pexels.com/photos/5245865/pexels-photo-5245865.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-weight: 500;
+  border: 1px solid #97717c;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 14px;
+}
+
+.search-form {
+  padding-top: 20px;
+}
+
+.search-button {
+  color: #ffffff;
+  background-color: #97717c;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 14px;
+  border-width: 1px;
+  border-color: transparent;
+  transition: all 150ms ease-in-out;
+  font-family: "PT Serif", serif;
+}
+
+.search-button:hover {
+  color: #ffffff;
+  background-color: #fe9e5a;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 55;
+  width: 64px;
+}
+
+.weather-temperature strong {
+  color: #ffffff;
+  font-size: 55px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  font-size: 16px;
+  top: -34px;
+}
+
+.weather-temperature .active {
+  color: #ffffff;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.tempDisplay {
+  padding-top: 10px;
+}
+
+.cityInfo {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.icon {
+  text-align: justify;
+}
+
+.city,
+.time,
+.emoji,
+.dayOverview,
+.currentTemp,
+.humidity,
+.wind {
+  display: block;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+
+.cityInfo,
+.tempDisplay,
+.humidityWindDisplay {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.time {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.dayOverview {
+  font-size: 20px;
+  font-family: "PT Serif", serif;
+}
+
+.temp {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.bg-custom {
+  border-radius: 14px;
+  background-color: transparent;
+}
+
+.navbar-brand {
+  color: rgb(209, 203, 203);
+}
+
+.weather-forecast-date {
+  font-size: 20px;
+}
+
+.weather-forecast-temperature-max {
+  color: #ffffff;
+}
+.weather-forecast-temperature-min {
+  color: rgb(209, 203, 203);
+}

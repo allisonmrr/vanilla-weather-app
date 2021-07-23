@@ -157,14 +157,3 @@ li {
 .navbar-brand {
   color: rgb(209, 203, 203);
 }
-
-.weather-forecast-date {
-  font-size: 20px;
-}
-
-.weather-forecast-temperature-max {
-  color: #ffffff;
-}
-.weather-forecast-temperature-min {
-  color: rgb(209, 203, 203);
-}

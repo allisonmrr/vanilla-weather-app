@@ -78,32 +78,7 @@ function handleSubmit(event) {
   search(cityInputDisplay.value);
 }
 
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  fahrenheitLink.remove("active");
-  celsiusLink.add("active");
-  let celsiusTemp = (fahrenheitTemp - 32) * 0.5556;
-  tempElement.innerHTML = Math.round(celsiusTemp);
-}
-
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-  let tempElement = document.querySelector("#temperature");
-  tempElement = fahrenheitTemp;
-}
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitTemp = null;
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 search("Minneapolis");

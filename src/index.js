@@ -85,19 +85,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  let celsiusTemp = (fahrenheitTemp - 32) * 0.5556;
-  tempElement.innerHTML = Math.round(celsiusTemp);
-}
-
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  tempElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
 function displayWeatherConditions(response) {
   let tempDisplay = document.querySelector("#temperature");
   let cityDisplay = document.querySelector("#city");
@@ -142,11 +129,5 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitTemp = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Minneapolis");

@@ -164,6 +164,7 @@ li {
 
 .weather-forecast-date {
   font-size: 20px;
+  font-family: "PT Serif", serif;
 }
 
 .weather-forecast-temperature-max {
@@ -175,11 +176,28 @@ li {
   font-size: 18px;
 }
 
+.footer {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-family: "PT Serif", serif;
+}
+
 .github-link {
   color: #ffffff;
   transition: all 120ms ease-in-out;
+  text-decoration: none;
 }
 
 .github-link:hover {
-  color: #795b63;
+  color: rgb(209, 203, 203);
+  font-family: "Montserrat", sans-serif;
+}
+
+.name {
+  font-family: "Montserrat", sans-serif;
+}
+
+.timestamp {
+  font-size: 12px;
 }

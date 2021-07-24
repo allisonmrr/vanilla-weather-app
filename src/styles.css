@@ -168,9 +168,11 @@ li {
 
 .weather-forecast-temperature-max {
   color: #ffffff;
+  font-size: 18px;
 }
 .weather-forecast-temperature-min {
   color: rgb(209, 203, 203);
+  font-size: 18px;
 }
 
 .github-link {

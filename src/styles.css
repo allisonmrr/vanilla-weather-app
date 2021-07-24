@@ -157,3 +157,12 @@ li {
 .navbar-brand {
   color: rgb(209, 203, 203);
 }
+
+.github-link {
+  color: #ffffff;
+  transition: all 120ms ease-in-out;
+}
+
+.github-link:hover {
+  color: #795b63;
+}

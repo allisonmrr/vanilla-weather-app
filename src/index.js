@@ -30,10 +30,17 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function getForecast(coordinates) {
-  let apiKey = "4b32d099d56b1bcaf39ac804454fcf6a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayForecast);
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  let celsiusTemp = (fahrenheitTemp - 32) * 0.5556;
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
 function displayWeatherConditions(response) {
@@ -46,9 +53,9 @@ function displayWeatherConditions(response) {
   let feelsLikeDisplay = document.querySelector("#feels-like");
   let iconDisplay = document.querySelector("#icon");
 
-  fahrenheitTemp = Math.round(response.data.main.temp);
+  fahrenheitTemp = response.data.main.temp;
 
-  tempDisplay.innerHTML = fahrenheitTemp;
+  tempDisplay.innerHTML = Math.round(fahrenheitTemp);
   cityDisplay.innerHTML = response.data.name;
   descriptionDisplay.innerHTML = response.data.weather[0].description;
   humidityDisplay.innerHTML = response.data.main.humidity;
@@ -60,10 +67,6 @@ function displayWeatherConditions(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconDisplay.setAttribute("alt", response.data.weather[0].description);
-
-  console.log(response.data);
-
-  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -80,5 +83,13 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Minneapolis");
